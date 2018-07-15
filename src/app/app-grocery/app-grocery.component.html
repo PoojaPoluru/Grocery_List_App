@@ -1,0 +1,38 @@
+<mat-card>
+<mat-toolbar color="primary">
+<h1>Add your Groceries here!  </h1> 
+</mat-toolbar>
+<div class="form-row">
+  <input 
+  class="input-form"
+  placeholder="Add grocery items like 'Milk' " 
+  #newEntry 
+  (blur)="addItem(newEntry.value); newEntry.value='' "
+  >
+  <button mat-icon-button 
+  matTooltip="Add the item to the list"
+  color="primary" (click)="addItem(newEntry.value)">
+      <i class="material-icons">
+      add
+      </i>
+  </button>
+</div>
+
+
+<mat-nav-list>
+    <a class="output-form" mat-list-item *ngFor="let item of items" #currentitem>
+        <button  mat-icon-button 
+        matTooltip="Delete the item from the list"
+        color="primary" (click)="onRemove(item)">
+            <i class="material-icons">
+            delete
+            </i>
+        </button>  
+      <h2>{{ item |titlecase}}</h2> 
+    </a>
+   
+ </mat-nav-list>
+
+
+</mat-card>
+

@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+body{
+background:url('http://vozrojdenie.me/wp-content/uploads/free-people-wallpaper.jpg');
+}
+.mat-card{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.mat-toolbar{
+    place-content: center;
+}
+.form-row{
+    display:flex;
+    align-items: center;
+    margin-top:5%;
+    place-content: center;
+    
+}
+.input-form{
+    margin-left:1%;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    height:40px;
+    max-height:300px;
+    
+}
+
+.output-form{
+    place-content: center;
+    margin-left:12%;
+}
+
